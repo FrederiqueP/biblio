@@ -22,14 +22,31 @@ function ContientCouleur(couleur, primaire ){
                 || TableauElementExiste(listeMarron, couleur)
                 )
     }
-    if( primaire == "bleu") {
-        return (TableauElementExiste(listeBleu, couleur)
-                || TableauElementExiste(listeVert, couleur)
-                || TableauElementExiste(listeViolet, couleur)
-                || TableauElementExiste(listeMarron, couleur)
-                )
-    }
+    // if( primaire == "bleu") {
+    //     return (TableauElementExiste(listeBleu, couleur)
+    //             || TableauElementExiste(listeVert, couleur)
+    //             || TableauElementExiste(listeViolet, couleur)
+    //             || TableauElementExiste(listeMarron, couleur)
+    //             )
+    // }
 
+    // utiliser indexOf pour la recherche par dichotomie
+    // La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. 
+    // Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
+    // arr.indexOf(elementRecherche, indiceDebut)
+    // retourne -1 si n'existe pas
+    if( primaire == "bleu") {
+        if ((listeBleu.indexOf(couleur) > -1)
+            || (listeVert.indexOf(couleur) > -1) 
+            || (listeViolet.indexOf(couleur) > -1)
+            || (listeMarron.indexOf(couleur) > -1)
+            ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 

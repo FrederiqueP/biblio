@@ -4,8 +4,8 @@ function afficherElement (listeElement) {
     elementsNombre = listeElement.length;
     let caseCourante;
     
-    for (cpt = 0; cpt < elementsNombre; cpt++) {
-        caseCourante = listeElement[cpt];
+    for (index = 0; index < elementsNombre; index++) {
+        caseCourante = listeElement[index];
         console.log(caseCourante);
     }
 }
